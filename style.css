@@ -1,15 +1,139 @@
-.container {
-    margin: 20px
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.zagolovok1 {
-    color: rgb(255, 0, 0);
+body {
+    font-family: system-ui, -apple-system, BlinkMacOSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+    padding: 1rem;
 }
 
-.zagolovok2 {
-    color: rgb(94, 250, 4);
+/* Основной контейнер */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    margin: 1.5rem 0 2rem;
+    color: #1a1a1a;
+    font-size: 2.2rem;
+}
+
+/* Список карточек */
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;       
+    gap: 1.5rem;
+}
+
+/* Каждая карточка */
+article {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Внутренний контент карточки */
+article > * {
+    padding: 1.25rem 1.5rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: #d32f2f;
+}
+
+address {
+    font-style: normal;
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+dl {
+    margin-bottom: 1rem;
+}
+
+dt {
+    font-weight: 600;
+    color: #444;
+    margin-top: 0.5rem;
+}
+
+dd {
+    margin-left: 0;
+    color: #666;
+}
+
+dd a {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+dd a:hover {
+    text-decoration: underline;
 }
 
 p {
-    color: blueviolet;
+    margin-bottom: 0.75rem;
+    color: #444;
+}
+
+p a {
+    color: #d32f2f;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (min-width: 640px) {
+    ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    article > * {
+        padding: 1rem 1.2rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
 }
