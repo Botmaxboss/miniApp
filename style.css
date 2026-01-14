@@ -1,0 +1,15 @@
+.container {
+    margin: 20px
+}
+
+.zagolovok1 {
+    color: rgb(255, 0, 0);
+}
+
+.zagolovok2 {
+    color: rgb(94, 250, 4);
+}
+
+p {
+    color: blueviolet;
+}

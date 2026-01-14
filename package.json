@@ -1,0 +1,18 @@
+{
+  "name": "gidbot",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MAX Messenger bot for GID support",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "@maxhub/max-bot-api": "0.2.1",
+    "dotenv": "^16.0.0"
+  },
+  "keywords": ["max", "bot", "messenger"],
+  "author": "Your Name",
+  "license": "MIT"
+}
